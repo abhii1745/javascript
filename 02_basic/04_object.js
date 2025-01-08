@@ -33,9 +33,29 @@ tinderUser.location = "kalyan"
 // // const obj4 = Object.assign({},obj1,obj2,obj3)
 // console.log(obj4);
 
-console.log(tinderUser)
-console.log(Object.keys(tinderUser)); //it convert all keys into the array list
-console.log(Object.values(tinderUser)); // values
-console.log(Object.entries(tinderUser));
+// console.log(tinderUser)
+// console.log(Object.keys(tinderUser)); //it convert all keys into the array list
+// console.log(Object.values(tinderUser)); // values
+// console.log(Object.entries(tinderUser));
+
+
+const course = {
+    name : "js  tutorials",
+    techaer : "abhishek",
+    price : 999,
+    duration : "8 hour"
+}
+// console.log(course["duration"]);
+// console.log(course.duration);
+
+
+// **********************Object destructure********************
+
+
+// const {duration : du} = course
+// console.log(du);
+
+const {techaer : tr} = course
+console.log(tr);
 
 
