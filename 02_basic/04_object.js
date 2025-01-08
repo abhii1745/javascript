@@ -28,12 +28,14 @@ tinderUser.location = "kalyan"
 // const obj3 = {5:"Rohit",6:"kohli"}
 
 // // console.log(obj1 + obj2 + obj3);
+
 // const obj4 = {...obj1,...obj2,...obj3}
 // // const obj4 = Object.assign({},obj1,obj2,obj3)
 // console.log(obj4);
 
 console.log(tinderUser)
-console.log(Object.keys(tinderUser));
-console.log(Object.values(tinderUser));
+console.log(Object.keys(tinderUser)); //it convert all keys into the array list
+console.log(Object.values(tinderUser)); // values
+console.log(Object.entries(tinderUser));
 
 
