@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abhishek grindd</title>
+</head>
+<body style="background-color: black; color: white;">
+    <!
+    
+</body>
+<script>
+    const div = document.createElement('div')
+    console.log(div);
+
+        // div.className = "main"
+        // div.id = "abhishek"
+        // div.setAttribute("title","HEllo ABhishek")
+        // div.style.backgroundColor = "green"
+        // div.style.padding = "12px"
+        // div.innerText = "Welcome to javaScript"
+        // document.body.appendChild(div)
+
+    function createNewDiv(text,bgColor){
+        div.className = "main"
+        div.id = "abhishek"
+        div.setAttribute("title","HEllo ABhishek")
+        div.style.backgroundColor = bgColor
+        div.style.padding = "12px"
+        div.innerText = text
+        document.body.appendChild(div)
+
+    }
+    const color = ["blue","green","yellow","red","tomato","violet"]
+    const message = [
+        "Welcome to javaScript",
+        "Jay shree ram",
+        "Abhishek bro",
+        "Rahul broo",
+        "Hello buddyy",
+        "lazzzzy day12",
+        
+    ]
+    for (i = 0; i<=5; i++){
+        createNewDiv(message[i],color[i])
+    }
+
+</script>
+</html>
