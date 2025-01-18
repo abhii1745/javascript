@@ -8,6 +8,26 @@ const randomColor = function(){
     }
     return color;
 }
-console.log(randomColor());
+
+
+let interVal;
+const start = document.querySelector("#start")
+const stop = document.querySelector("#stop")
+const body = document.querySelector("body")
+start.addEventListener("click", function(e){
+    interVal = setInterval(function(){
+        body.style.backgroundColor = randomColor()
+        console.log("abhishek");
+        
+
+
+    },1000)
+})
+
+stop.addEventListener("click", function(e){
+    clearInterval(interVal)
+})
+
+// console.log(randomColor());
 
 // console.log(Math.floor(Math.random() * 16));
