@@ -8,6 +8,7 @@
 <body>
     <h1>Rahul</h1>
     <button id="stop">Stop</button>
+    <button id="start">Start</button>
 </body>
 <script>
     // const sayDate = function(hi){
@@ -16,17 +17,23 @@
     // }
     
     // // setInterval(sayDate,2000,"ab")
+    var clearInt = setInterval(sayDate,2000,"ab")
+document.querySelector("#start").addEventListener("click",function(e){
+    
+    
 
-
+})
 
     const sayDate = function(hi){
         console.log(hi);
         
     }
     
+    // const clearInt = setInterval(sayDate,2000,"ab")
     // setInterval(sayDate,2000,"ab")
-    const clearInt = setInterval(sayDate,2000,"ab")
+    
     document.querySelector("#stop").addEventListener("click" ,function(e){
+        
         clearInterval(clearInt)
 
 
