@@ -6,7 +6,8 @@
     <title>AsyncJS</title>
 </head>
 <body>
-    <h1>Abhishek</h1>
+    <h1>Abhishekk</h1>
+    <button id="stop">Stop</button>
 </body>
 <script>
     // setTimeout(function(){
@@ -18,12 +19,37 @@
 // document.querySelector("h1").textContent = "best javascript series"
 
 
+    // const abhi = function(){
+    //     console.log("ABhishek");
+    //     document.querySelector("h1").textContent = "best javascript series"
+
+    // }
+    // setTimeout(abhi,3000)
+
+
+
     const abhi = function(){
         console.log("ABhishek");
         document.querySelector("h1").textContent = "best javascript series"
 
     }
-    setTimeout(abhi,3000)
+    const abc = function(){
+        document.querySelector("h1").textContent = "best javascript series"
+    }
+
+    // setTimeout(abc,3000)
+
+
+    //clearTimeoUt
+    const dontChange = setTimeout(abc,3000)
+    document.querySelector("#stop").addEventListener("click",function(e){
+        clearTimeout(dontChange)
+
+    })
+    
+    
+
+
 
 </script>
 </html>
