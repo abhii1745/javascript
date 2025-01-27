@@ -17,7 +17,22 @@
 </body>
 <script>
     const xhr = new XMLHttpRequest();
-    xhr.open('GET',"https://api.github.com/users/abhii1745")
+    xhr.open('GET',"https://api.github.com/users/hiteshchoudhary")
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        const val = xhr.readyState
+        if(val=== 4){
+            // console.log(this.responseText);
+            const data = JSON.parse(this.responseText)
+            console.log(data.followers);
+                        
+
+        }
+        
+
+    }
+    
+    
     
     xhr.send()
 </script>
