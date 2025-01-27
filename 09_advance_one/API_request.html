@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style>
         body{
             background-color: black;
@@ -12,28 +13,50 @@
     </style>
 </head>
 <body>
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae, voluptas commodi. Tenetur laboriosam maiores soluta dignissimos corrupti consectetur molestias veniam vel, facere, reprehenderit deleniti vero alias cum nisi, voluptatibus eaque iure obcaecati? Tempore sunt praesentium amet. Libero dolore aspernatur sit ducimus eum voluptatem aut fugit quisquam tempora? Accusamus eos molestias a voluptatem totam aut omnis nam</div>
+    <div class="abhi"></div>
+    <button id="button" class="btn btn-primary">Show details</button>
+    
+
     
 </body>
 <script>
+    let abhi = document.querySelector(".abhi")
+    const button = document.getElementById("button")
+    const url = "https://api.github.com/users/hiteshchoudhary"
     const xhr = new XMLHttpRequest();
-    xhr.open('GET',"https://api.github.com/users/hiteshchoudhary")
+    xhr.open('GET',url)
     xhr.onreadystatechange = function(){
         console.log(xhr.readyState);
         const val = xhr.readyState
         if(val=== 4){
             // console.log(this.responseText);
             const data = JSON.parse(this.responseText)
-            console.log(data.followers);
-                        
+            // console.log(data.followers);
+            button.addEventListener("click", function(e){
+                e.defaultPrevented;
+                button.style.display = "none"
+                abhi.innerHTML = ` <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=${data.avatar_url} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title text-success">${data.login}</h5>
+          <p class="card-text text-dark">Followers: ${data.followers}</p>
+          
+        </div>
+      </div>` 
+                
+            })
+                                  
 
         }
         
 
-    }
+    },
     
     
     
     xhr.send()
+    
+    
 </script>
+
 </html>
