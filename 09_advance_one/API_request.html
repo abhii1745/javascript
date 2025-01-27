@@ -13,15 +13,44 @@
     </style>
 </head>
 <body>
+    Check AnyOne Github Profile:
     <div class="abhi"></div>
+    <!-- <input type="text" class="form-control" id="usr"> -->
     <button id="button" class="btn btn-primary">Show details</button>
     
 
     
 </body>
 <script>
+    // let GitLink = document.getElementById("usr")
+    // let currentVal;
+    // GitLink.addEventListener("input", function(e){
+    //     currentVal = e.target.value
+    //     hello(currentVal)
+    //     // console.log(currentVal);
+
+        
+        
+    // })
+    // let hello = function process(value){
+    //     console.log(value);
+        
+        
+    //     return value
+        
+    // }
+    // console.log(hello);
+    
+    // // console.log(currentVal);
+    
+
+    
+    
+    
+    
     let abhi = document.querySelector(".abhi")
     const button = document.getElementById("button")
+    // const url = "https://api.github.com/users/hiteshchoudhary"
     const url = "https://api.github.com/users/hiteshchoudhary"
     const xhr = new XMLHttpRequest();
     xhr.open('GET',url)
@@ -31,9 +60,13 @@
         if(val=== 4){
             // console.log(this.responseText);
             const data = JSON.parse(this.responseText)
+            // console.log(data);
+            
             // console.log(data.followers);
             button.addEventListener("click", function(e){
                 e.defaultPrevented;
+                
+                
                 button.style.display = "none"
                 abhi.innerHTML = ` <div class="card" style="width: 18rem;">
         <img class="card-img-top" src=${data.avatar_url} alt="Card image cap">
