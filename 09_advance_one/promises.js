@@ -25,6 +25,19 @@
 // })
 
 
+// const promiseThree = new Promise(function(resolve,reject){
+//     setTimeout(function(){
+//         // console.log("asyn task 3");
+//         resolve({username : "Abhishek", email:"abhi123@gmail.com"})
+        
+//     },1000)
+    
+// })
+// promiseThree.then(function(abc){
+//     console.log(abc);
+    
+
+// })
 
 
 
