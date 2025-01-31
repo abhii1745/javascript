@@ -43,8 +43,9 @@
 
 
 const promiseFour = new Promise(function(resolve,reject){
-    setTimeout(function(){
-        let error = true
+    setTimeout(function()
+    {
+        let error = false
         if(! error){
             resolve({username :"Abhishek Yadav", pass : "145"})
 
