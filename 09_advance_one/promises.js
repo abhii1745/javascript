@@ -42,7 +42,12 @@
 
 
 
+const promiseFour = new Promise(function(resolve,reject){
+    setTimeout(function(){
+        let error = true
 
+    },1000)
+})
 
 
 
