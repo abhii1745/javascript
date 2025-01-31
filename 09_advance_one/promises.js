@@ -45,11 +45,12 @@
 const promiseFour = new Promise(function(resolve,reject){
     setTimeout(function()
     {
-        let error = false
+        let error = true
         if(! error){
             resolve({username :"Abhishek Yadav", pass : "145"})
 
         }else{
+            
             reject("your request is rejected")
         }
 
@@ -59,6 +60,8 @@ promiseFour.then(function(abc){
     console.log(abc);
     
 
+}).catch(function(abc){
+    console.log(abc);
 })
 
 
