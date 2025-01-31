@@ -45,7 +45,7 @@
 const promiseFour = new Promise(function(resolve,reject){
     setTimeout(function()
     {
-        let error = true
+        let error = false
         if(! error){
             resolve({username :"Abhishek Yadav", pass : "145"})
 
@@ -58,9 +58,16 @@ const promiseFour = new Promise(function(resolve,reject){
 })
 promiseFour.then(function(abc){
     console.log(abc);
+    // console.log(abc.username);
+    return abc.username
     
 
-}).catch(function(abc){
+}).then(function(abc){
+    console.log(abc);
+    
+
+})
+.catch(function(abc){
     console.log(abc);
 })
 
